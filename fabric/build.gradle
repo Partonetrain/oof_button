@@ -10,6 +10,8 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    modImplementation 'mysticdrew:common-networking-fabric:1.0.16-1.21'
+    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${fcap_version}"
 }
 
 loom {
@@ -33,5 +35,15 @@ loom {
             ideConfigGenerated(true)
             runDir('runs/server')
         }
+    }
+}
+
+repositories {
+    maven {
+        url = "https://jm.gserv.me/repository/maven-public/"
+    }
+    maven {
+        name = "Fuzs Mod Resources"
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
     }
 }
