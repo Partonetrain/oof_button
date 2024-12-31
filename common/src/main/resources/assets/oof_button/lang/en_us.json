@@ -1,5 +1,15 @@
 {
+  "key.oof_button.oof": "Funny Sound",
+  "key.oof_button.ctrl_modifier": "Funny Sound Modifier 1",
+  "key.oof_button.alt_modifier": "Funny Sound Modifier 2",
+
   "oof_button.player.oof": "$player oofs",
   "oof_button.player.roblox_oof": "$player oofs",
-  "oof_button.player.vine_boom": "$player booms"
+  "oof_button.player.vine_boom": "$player booms",
+  "oof_button.player.webfishing_meow": "$player meows",
+  "oof_button.player.webfishing_hiss": "$player hisses",
+  "oof_button.player.webfishing_mrrp": "$player mrrps",
+  "oof_button.player.webfishing_bark": "$player barks",
+  "oof_button.player.webfishing_growl": "$player growls",
+  "oof_button.player.webfishing_whimper": "$player whimpers"
 }

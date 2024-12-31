@@ -43,14 +43,13 @@ public class OofPacket {
 
     public static void handle(PacketContext<OofPacket> ctx)
     {
-
         if (Side.CLIENT.equals(ctx.side()))
         {
-            Minecraft.getInstance().player.sendSystemMessage(Component.literal("OofPacket received on the client!: " + ctx.message().oofIndex + " " ));
+            //Minecraft.getInstance().player.sendSystemMessage(Component.literal("OofPacket received on the client!: " + ctx.message().oofIndex + " " ));
         }
         else
         {
-            ctx.sender().sendSystemMessage(Component.literal("OofPacket received on the server " + ctx.message().oofIndex + " "));
+            //ctx.sender().sendSystemMessage(Component.literal("OofPacket received on the server " + ctx.message().oofIndex + " "));
             ctx.sender().level().playSound(null, ctx.sender().getOnPos(), CommonClass.getSoundEvent(ctx.message().oofIndex), SoundSource.PLAYERS, 1F, (float) ctx.message().oofPitch);
         }
     }

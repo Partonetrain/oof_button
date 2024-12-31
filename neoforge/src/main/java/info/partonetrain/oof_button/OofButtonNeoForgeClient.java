@@ -61,12 +61,11 @@ public class OofButtonNeoForgeClient {
                 }
                 while (OOF_BUTTON_ALT.consumeClick()) {
                     Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_ALT_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
-                    CommonClientClass.cooldown = 21;
+                    CommonClientClass.cooldown = CommonClientClass.MAX_COOLDOWN;
                 }
             }
 
             CommonClientClass.cooldown = Math.max(CommonClientClass.cooldown - 1, 0);
-            Constants.LOG.info(String.valueOf(CommonClientClass.cooldown));
         }
     }
 

@@ -4,7 +4,6 @@ import com.mojang.blaze3d.platform.InputConstants;
 import commonnetwork.api.Dispatcher;
 import info.partonetrain.oof_button.network.OofPacket;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.KeyMapping;
@@ -35,20 +34,22 @@ public class OofButtonFabricClient implements ClientModInitializer {
             if(Minecraft.getInstance().level != null) {
                 if (CommonClientClass.cooldown == 0) {
                     while (OOF_BUTTON.consumeClick()) {
-                        int btnIndex = OofButtonConfig.OOF_SOUND.get().getIndex();
+                        int btnIndex = 0;
                         if (CTRL_MOD.isDown()) {
                             btnIndex = OofButtonConfig.OOF_CTRL_SOUND.get().getIndex();
                         }
-                        if (ALT_MOD.isDown()) {
+                        else if (ALT_MOD.isDown()) {
                             btnIndex = OofButtonConfig.OOF_ALT_SOUND.get().getIndex();
                         }
+                        else {
+                            btnIndex = OofButtonConfig.OOF_SOUND.get().getIndex();
+                        }
                         Dispatcher.sendToServer(new OofPacket(btnIndex, OofButtonConfig.SOUND_PITCH.get()));
-                        CommonClientClass.cooldown = 21;
+                        CommonClientClass.cooldown = CommonClientClass.MAX_COOLDOWN;
                     }
                 }
 
                 CommonClientClass.cooldown = Math.max(CommonClientClass.cooldown - 1, 0);
-                Constants.LOG.info(String.valueOf(CommonClientClass.cooldown));
             }
         });
     }
