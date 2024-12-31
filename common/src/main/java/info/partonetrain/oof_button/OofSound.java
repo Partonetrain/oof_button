@@ -26,7 +26,7 @@ public enum OofSound {
     }
 
     public String getI18N(){
-        return "oof_sound.option." + this.name().toLowerCase();
+        return "oof_sound.player." + this.name().toLowerCase();
     }
 
 }

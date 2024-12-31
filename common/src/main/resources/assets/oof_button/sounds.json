@@ -1,0 +1,26 @@
+{
+    "oof": {
+        "sounds": [
+            {
+                "name": "oof_button:oof",
+                "subtitle": "oof_button.player.oof"
+            }
+        ]
+    },
+    "roblox_oof": {
+        "sounds": [
+            {
+                "name": "oof_button:roblox_oof",
+                "subtitle": "oof_button.player.roblox_oof"
+            }
+        ]
+    },
+    "vine_boom": {
+        "sounds": [
+            {
+                "name": "oof_button:vine_boom",
+                "subtitle": "oof_button.player.vine_boom"
+            }
+        ]
+    }
+}

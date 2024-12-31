@@ -13,7 +13,6 @@ public class FabricSoundEvents {
             SoundEvent se = SoundEvent.createVariableRangeEvent(rl);
             Holder<SoundEvent> soundEventHolder = Registry.registerForHolder(BuiltInRegistries.SOUND_EVENT, rl, se);
             CommonSoundEvents.events.put(sound.getIndex(),soundEventHolder);
-            Constants.LOG.info("Registered SoundEvent " + soundEventHolder.value().getLocation());
         }
     }
 }

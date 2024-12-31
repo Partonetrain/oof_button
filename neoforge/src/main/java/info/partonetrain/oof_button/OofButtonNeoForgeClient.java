@@ -53,6 +53,15 @@ public class OofButtonNeoForgeClient {
             if(CommonClientClass.cooldown == 0){
                 while (OOF_BUTTON.consumeClick()) {
                     Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
+                    CommonClientClass.cooldown = 21;
+                }
+                while (OOF_BUTTON_CTRL.consumeClick()) {
+                    Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_CTRL_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
+                    CommonClientClass.cooldown = 21;
+                }
+                while (OOF_BUTTON_ALT.consumeClick()) {
+                    Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_ALT_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
+                    CommonClientClass.cooldown = 21;
                 }
             }
 
