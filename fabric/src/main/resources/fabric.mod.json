@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
             "info.partonetrain.oof_button.OofButtonFabric"
+        ],
+        "client": [
+            "info.partonetrain.oof_button.OofButtonFabricClient"
         ]
     },
     "mixins": [

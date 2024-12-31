@@ -10,15 +10,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Entity;
 
 public class OofPacket {
 
     int oofIndex = 0;
     double oofPitch = 0;
-    public static final ResourceLocation CHANNEL = ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "oof_packet");
+    public static final ResourceLocation CHANNEL = Constants.oofPacket;
     public static final StreamCodec<FriendlyByteBuf, OofPacket> STREAM_CODEC = StreamCodec.ofMember(OofPacket::encode, OofPacket::decode);
 
     public OofPacket(int index, double pitch)
@@ -40,7 +38,7 @@ public class OofPacket {
 
     public static OofPacket decode(FriendlyByteBuf buf)
     {
-        return new OofPacket(buf.getInt(0), buf.getDouble(1));
+        return new OofPacket(buf.readInt(), buf.readDouble());
     }
 
     public static void handle(PacketContext<OofPacket> ctx)
@@ -52,8 +50,8 @@ public class OofPacket {
         }
         else
         {
-            ctx.sender().sendSystemMessage(Component.literal("OofPacket received on the server" + ctx.message().oofIndex + " "));
-            ctx.sender().level().playSound(ctx.sender(), ctx.sender().getOnPos(), CommonClass.getSoundEvent(ctx.message().oofIndex), SoundSource.PLAYERS, 1F, (float) ctx.message().oofPitch);
+            ctx.sender().sendSystemMessage(Component.literal("OofPacket received on the server " + ctx.message().oofIndex + " "));
+            ctx.sender().level().playSound(null, ctx.sender().getOnPos(), CommonClass.getSoundEvent(ctx.message().oofIndex), SoundSource.PLAYERS, 1F, (float) ctx.message().oofPitch);
         }
     }
 }

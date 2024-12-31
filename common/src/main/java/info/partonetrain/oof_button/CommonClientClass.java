@@ -1,7 +1,8 @@
 package info.partonetrain.oof_button;
 
 public class CommonClientClass {
-    public static void init(){
 
+    public static int cooldown = 0;
+    public static void init(){
     }
 }
