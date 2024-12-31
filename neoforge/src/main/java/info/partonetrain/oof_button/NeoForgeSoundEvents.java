@@ -16,7 +16,6 @@ public class NeoForgeSoundEvents {
             ResourceLocation rl = Constants.getSoundLocation(sound.getIndex());
             Holder<SoundEvent> soundEventHolder = SOUND_EVENTS.register(rl.getPath(), SoundEvent::createVariableRangeEvent);
             CommonSoundEvents.events.put(sound.getIndex(), soundEventHolder);
-            Constants.LOG.info("Registered SoundEvent " + soundEventHolder.value().getLocation());
         }
     }
 }
