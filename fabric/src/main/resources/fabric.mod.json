@@ -8,11 +8,11 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "sources": "https://github.com/Partonetrain/oof_button/",
+        "issues": "https://github.com/Partonetrain/oof_button/issues"
     },
     "license": "${license}",
-    "icon": "${mod_id}.png",
+    "icon": "assets/oof_button/icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
@@ -34,7 +34,6 @@
         "commonnetworking": "*"
     },
     "suggests": {
-        "another-mod": "*"
     }
 }
   

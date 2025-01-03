@@ -1,7 +1,11 @@
 {
   "key.oof_button.oof": "Funny Sound",
+
   "key.oof_button.ctrl_modifier": "Funny Sound Modifier 1",
   "key.oof_button.alt_modifier": "Funny Sound Modifier 2",
+
+  "key.oof_button.oof_ctrl": "Funny Sound 2",
+  "key.oof_button.oof_alt": "Funny Sound 3",
 
   "oof_button.player.oof": "$player oofs",
   "oof_button.player.roblox_oof": "$player oofs",
