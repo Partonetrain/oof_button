@@ -33,7 +33,7 @@ public class OofButtonFabricClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if(Minecraft.getInstance().level != null) {
                 if (CommonClientClass.cooldown == 0) {
-                    while (OOF_BUTTON.consumeClick()) {
+                    if (OOF_BUTTON.isDown()) {
                         int btnIndex = 0;
                         if (CTRL_MOD.isDown()) {
                             btnIndex = OofButtonConfig.OOF_CTRL_SOUND.get().getIndex();

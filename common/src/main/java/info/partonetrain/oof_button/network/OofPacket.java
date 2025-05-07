@@ -5,6 +5,8 @@ import commonnetwork.networking.data.Side;
 import info.partonetrain.oof_button.CommonClass;
 import info.partonetrain.oof_button.Constants;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.codec.StreamCodec;
@@ -50,7 +52,7 @@ public class OofPacket {
         else
         {
             //ctx.sender().sendSystemMessage(Component.literal("OofPacket received on the server " + ctx.message().oofIndex + " "));
-            ctx.sender().level().playSound(null, ctx.sender().getOnPos(), CommonClass.getSoundEvent(ctx.message().oofIndex), SoundSource.PLAYERS, 1F, (float) ctx.message().oofPitch);
+            ctx.sender().level().playSound(null, ctx.sender().getOnPos().relative(Direction.Axis.Y, 1), CommonClass.getSoundEvent(ctx.message().oofIndex), SoundSource.PLAYERS, 1F, (float) ctx.message().oofPitch);
         }
     }
 }

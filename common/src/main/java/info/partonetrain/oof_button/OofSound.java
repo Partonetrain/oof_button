@@ -14,7 +14,11 @@ public enum OofSound {
 
     WEBFISHING_BARK(20),
     WEBFISHING_GROWL(21),
-    WEBFISHING_WHIMPER(22);
+    WEBFISHING_WHIMPER(22),
+
+    JACKBLACK_STEVE(30),
+    JACKBLACK_CHICKENJOCKEY(31),
+    JACKBLACK_FLINTSTEEL(32);
 
     private final int index;
     OofSound(int index) {

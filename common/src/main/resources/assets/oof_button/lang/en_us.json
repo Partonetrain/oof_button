@@ -15,5 +15,8 @@
   "oof_button.player.webfishing_mrrp": "$player mrrps",
   "oof_button.player.webfishing_bark": "$player barks",
   "oof_button.player.webfishing_growl": "$player growls",
-  "oof_button.player.webfishing_whimper": "$player whimpers"
+  "oof_button.player.webfishing_whimper": "$player whimpers",
+  "oof_button.player.jackblack_steve": "$player is Steve",
+  "oof_button.player.jackblack_chickenjockey": "$player says Chicken Jockey",
+  "oof_button.player.jackblack_flintsteel": "$player says Flint and Steel"
 }

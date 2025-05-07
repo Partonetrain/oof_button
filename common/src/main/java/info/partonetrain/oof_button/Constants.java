@@ -28,6 +28,9 @@ public class Constants {
             case 20 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "webfishing_bark");
             case 21 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "webfishing_growl");
             case 22 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "webfishing_whimper");
+            case 30 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_steve");
+            case 31 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_chickenjockey");
+            case 32 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_flintsteel");
             default -> ResourceLocation.withDefaultNamespace("entity.player.death");
         };
         if(initializing && ret.getNamespace().equals("minecraft")){

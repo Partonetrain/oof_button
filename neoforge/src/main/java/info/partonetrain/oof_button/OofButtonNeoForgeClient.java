@@ -16,7 +16,7 @@ import net.neoforged.neoforge.client.settings.KeyModifier;
 import net.neoforged.neoforge.common.NeoForge;
 import org.lwjgl.glfw.GLFW;
 
-@Mod(Constants.MOD_ID)
+@Mod(value = Constants.MOD_ID, dist = Dist.CLIENT)
 @EventBusSubscriber(value = Dist.CLIENT, modid = Constants.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
 public class OofButtonNeoForgeClient {
     public static final KeyMapping OOF_BUTTON = new KeyMapping(
@@ -51,15 +51,15 @@ public class OofButtonNeoForgeClient {
     public void onClientTick(ClientTickEvent.Post event) {
         if(Minecraft.getInstance().level != null){
             if(CommonClientClass.cooldown == 0){
-                while (OOF_BUTTON.consumeClick()) {
+                if (OOF_BUTTON.isDown()) {
                     Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
-                    CommonClientClass.cooldown = 21;
+                    CommonClientClass.cooldown = CommonClientClass.MAX_COOLDOWN;
                 }
-                while (OOF_BUTTON_CTRL.consumeClick()) {
+                if (OOF_BUTTON_CTRL.isDown()) {
                     Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_CTRL_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
-                    CommonClientClass.cooldown = 21;
+                    CommonClientClass.cooldown = CommonClientClass.MAX_COOLDOWN;
                 }
-                while (OOF_BUTTON_ALT.consumeClick()) {
+                if (OOF_BUTTON_ALT.isDown()) {
                     Dispatcher.sendToServer(new OofPacket(OofButtonConfig.OOF_ALT_SOUND.get().getIndex(), OofButtonConfig.SOUND_PITCH.get()));
                     CommonClientClass.cooldown = CommonClientClass.MAX_COOLDOWN;
                 }

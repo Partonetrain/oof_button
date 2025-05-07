@@ -4,6 +4,7 @@ package info.partonetrain.oof_button;
 import com.mojang.blaze3d.platform.InputConstants;
 import commonnetwork.api.Dispatcher;
 import info.partonetrain.oof_button.network.OofPacket;
+import info.partonetrain.oof_button.platform.Services;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
@@ -25,7 +26,9 @@ public class OofButtonNeoForge {
 
     public OofButtonNeoForge(ModContainer container, IEventBus eventBus) {
         CommonClass.init();
-        container.registerConfig(ModConfig.Type.COMMON, OofButtonConfig.SPEC, "oof_button-client.toml");
+        if(Services.PLATFORM.isClient()){
+            container.registerConfig(ModConfig.Type.CLIENT, OofButtonConfig.SPEC, "oof_button-client.toml");
+        }
         NeoForgeSoundEvents.init();
         NeoForgeSoundEvents.SOUND_EVENTS.register(eventBus);
     }

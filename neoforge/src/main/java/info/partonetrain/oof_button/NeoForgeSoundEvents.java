@@ -12,7 +12,7 @@ public class NeoForgeSoundEvents {
 
     public static void init(){
         for (OofSound sound : OofSound.values()) {
-            ResourceLocation rl = Constants.getSoundLocation(sound.getIndex());
+            ResourceLocation rl = Constants.getSoundLocation(sound.getIndex(), true);
             Holder<SoundEvent> soundEventHolder = SOUND_EVENTS.register(rl.getPath(), SoundEvent::createVariableRangeEvent);
             CommonSoundEvents.events.put(sound.getIndex(), soundEventHolder);
         }

@@ -70,5 +70,34 @@
             }
         ],
         "subtitle": "oof_button.player.webfishing_whimper"
+    },
+    "jackblack_steve": {
+        "sounds": [
+            {
+                "name": "oof_button:jackblack_steve_movie",
+                "weight": 3
+            },
+            {
+                "name": "oof_button:jackblack_steve_trailer",
+                "weight": 1
+            }
+        ],
+        "subtitle": "oof_button.player.jackblack_steve"
+    },
+    "jackblack_chickenjockey": {
+        "sounds": [
+            {
+                "name": "oof_button:jackblack_chickenjockey"
+            }
+        ],
+        "subtitle": "oof_button.player.jackblack_chickenjockey"
+    },
+    "jackblack_flintsteel": {
+        "sounds": [
+            {
+                "name": "oof_button:jackblack_flintsteel"
+            }
+        ],
+        "subtitle": "oof_button.player.jackblack_flintsteel"
     }
 }
