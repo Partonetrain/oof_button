@@ -31,6 +31,9 @@ public class Constants {
             case 30 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_steve");
             case 31 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_chickenjockey");
             case 32 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "jackblack_flintsteel");
+            case 40 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "xenoblade_reallyfeelingit");
+            case 41 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "xenoblade_indeed");
+            case 42 -> ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "xenoblade_fullofbeans");
             default -> ResourceLocation.withDefaultNamespace("entity.player.death");
         };
         if(initializing && ret.getNamespace().equals("minecraft")){

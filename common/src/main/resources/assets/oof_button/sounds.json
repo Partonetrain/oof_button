@@ -99,5 +99,29 @@
             }
         ],
         "subtitle": "oof_button.player.jackblack_flintsteel"
+    },
+    "xenoblade_reallyfeelingit": {
+        "sounds": [
+            {
+                "name": "oof_button:xenoblade_reallyfeelingit"
+            }
+        ],
+        "subtitle": "oof_button.player.xenoblade_reallyfeelingit"
+    },
+    "xenoblade_indeed": {
+        "sounds": [
+            {
+                "name": "oof_button:xenoblade_indeed"
+            }
+        ],
+        "subtitle": "oof_button.player.xenoblade_indeed"
+    },
+    "xenoblade_fullofbeans": {
+        "sounds": [
+            {
+                "name": "oof_button:xenoblade_fullofbeans"
+            }
+        ],
+        "subtitle": "oof_button.player.xenoblade_fullofbeans"
     }
 }

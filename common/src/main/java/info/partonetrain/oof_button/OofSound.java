@@ -18,8 +18,11 @@ public enum OofSound {
 
     JACKBLACK_STEVE(30),
     JACKBLACK_CHICKENJOCKEY(31),
-    JACKBLACK_FLINTSTEEL(32);
+    JACKBLACK_FLINTSTEEL(32),
 
+    XENOBLADE_REALLYFEELINGIT(40),
+    XENOBLADE_INDEED(41),
+    XENOBLADE_FULLOFBEANS(42);
     private final int index;
     OofSound(int index) {
         this.index = index;
